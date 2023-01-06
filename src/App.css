@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.drink-card {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 280px;
+    min-height: 610px;
+    border: 2px solid rgb(2, 2, 56);
+    border-radius: 1.5rem 0 1.5rem 0;
+    margin: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.drink-card img {
+    border-radius: 1.5rem 0 0 0;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    border: 1px solid;
+    width: 250px;
+    border-radius: 0 1rem 0 1rem;
+}
+
+form input {
+    margin: 10px 20px;
+    border: 0;
+    outline: none;
+}
+  
+form button {
+    background-color: white;
+    border: 0;
+    margin-right: 15px;
+}
+
+.search {
+    width: 21px;
+    cursor: pointer;
+}
+
+.search:hover {
+    width: 24px;
+}
+
+.null {
+    width: 400px;
+}
