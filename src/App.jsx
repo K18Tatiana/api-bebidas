@@ -35,7 +35,7 @@ function App() {
       <form onSubmit={ (e) => searchDrink(e) }>
         <input type="text" placeholder='Busca una bebida' />
         <button type='submit'>
-          <img className='search' src="/src/assets/img/copa-de-champan.png" alt="" />
+          <img className='search' src="/champan.png" alt="" />
         </button>
       </form>
       {
@@ -47,7 +47,7 @@ function App() {
         /> )
         :
         <>
-          <img className='null' src="/src/assets/img/barra-de-bar.png" alt="" />
+          <img className='null' src="barra-de-bar.png" alt="" />
           <h1>NO HAY COINCIDENCIAS</h1>
         </>
       }
