@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: white;
+}
+
 .App {
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Roboto Slab', serif;
-    background-color: white;
 }
 
 .bg-form {
@@ -80,5 +83,5 @@ form button {
 }
 
 .null {
-    width: 400px;
+    width: 350px;
 }
