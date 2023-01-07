@@ -16,8 +16,22 @@ function App() {
     axios
     .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${nameDrink}`)
     .then( resp => {
-      console.log(resp.data.drinks)
-      setDataDrinks(resp.data.drinks)
+      if(resp.data.drinks !== null) {
+        const namesArray = resp.data.drinks.map( drink => drink.strDrink ).sort()
+        const newArray = []
+        for(let i = 0; i < namesArray.length; i++) {
+          for(let j = 0; j < resp.data.drinks.length; j++) {
+            if(namesArray[i] === resp.data.drinks[j].strDrink) {
+              newArray.push(resp.data.drinks[j])
+            }
+          }
+        }
+        console.log(newArray)
+        setDataDrinks(newArray)
+      } else {
+        console.log(resp.data.drinks);
+        setDataDrinks(resp.data.drinks)
+      }
     } )
     .catch( error => {
       console.error(error)
@@ -32,12 +46,14 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={ (e) => searchDrink(e) }>
-        <input type="text" placeholder='Busca una bebida' />
-        <button type='submit'>
-          <img className='search' src="/champan.png" alt="" />
-        </button>
-      </form>
+      <div className="bg-form">
+        <form onSubmit={ (e) => searchDrink(e) }>
+          <input type="text" placeholder='Look for a drink...' />
+          <button type='submit'>
+            <img className='search' src="/champan.png" alt="" />
+          </button>
+        </form>
+      </div>
       {
         dataDrinks !== null
         ?

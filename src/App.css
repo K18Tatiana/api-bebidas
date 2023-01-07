@@ -10,22 +10,31 @@
     font-family: 'Roboto Slab', serif;
 }
 
+.bg-form {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #f1889b, #fdb4bf, #ffcdd4);
+}
+
 .drink-card {
     display: inline-flex;
     flex-direction: column;
     justify-content: start;
     width: 280px;
-    min-height: 610px;
+    min-height: 450px;
     border: 1px solid rgb(2, 2, 56);
     border-radius: 1.5rem 0 1.5rem 0;
     margin: 20px;
 }
 
+.drink-card:hover {
+    cursor: pointer;
+    width: 285px;
+}
+
 .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 300px;
+    margin: auto 0;
 }
 
 .drink-card img {
@@ -35,32 +44,38 @@
 form {
     display: flex;
     justify-content: space-between;
-    margin: 50px auto;
+    margin: 0 auto;
     border: 1px solid;
-    width: 250px;
+    width: 300px;
     border-radius: 0 1rem 0 1rem;
+    background-color: white;
+}
+
+form:hover {
+    border-color: #e014a3;
 }
 
 form input {
     margin: 10px 20px;
     border: 0;
     outline: none;
+    font-size: 15px;
 }
   
 form button {
     padding-top: 2px;
     background-color: white;
     border: 0;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .search {
-    width: 22px;
+    width: 23px;
     cursor: pointer;
 }
 
 .search:hover {
-    width: 25px;
+    width: 26px;
 }
 
 .null {
